@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Puzzle</title>
+
+	<!-- responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- meta -->
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+	<meta name="title" content="Puzzlefy">
+	<meta name="description" content="Solve and share puzzles to your friends!">
+	<meta name="keywords" content="puzzle, jigsaw, p5js, puzzlefy, puzzlify, image to puzzle, image to jigsaw">
+
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="puzzlefy.netlify.app">
+	<meta property="og:url" content="https://puzzlefy.netlify.app">
+	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/fe/Puzzle.jpg">
+	<meta property="og:title" content="Puzzlefy">
+	<meta property="og:description" content="Solve and share puzzles with your friends!">
+
+	<script src=meta.js></script>
+
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- icons -->
+</head>
+
+<body touch-action=none unresolved>
+	<div class="ui disabled">
+
+		<!-- ending -->
+		<div class="ui-popup-container disabled">
+			<div class=ui-popup>
+				<!-- Thank you for playing -->
+				<div class=section>
+					<h1>Спасибо за игру!</h1>
+				</div>
+				<!-- Puzzle generator
+				<div class="section container">
+					<h2>Generate your puzzle</h2>
+					<p hidden>Make your own puzzle and share it with your friends!</p>
+					<input type="text" placeholder="Image link" id=url> <input type="number" placeholder="Width" min=0
+						id=cols> x <input type="number" placeholder="Height" min=0 id=rows>
+					<br><br>
+					<div>
+						<button type="button" onclick="window.location.href = generate()">Generate</button>
+						<button type="button" class=copy onclick="copyGenerate()"><i class="fas fa-copy"></i></button>
+						<button type="button" class=twitter onclick="shareGenerate()"><i
+								class="fab fa-twitter"></i></button>
+					</div>
+				</div> -->
+				<!-- Zombiecraft
+				<div id=zombiecraft>
+					<img src=https://zc.stephcraft.net/assets/image/zombiecraft-logo.png>
+					<p>Do you like Minecraft and Call of Duty zombies? If so, then join this epic Minecraft server
+						without any mods!</p>
+					<div>
+						<a href="https://zc.stephcraft.net" target=_blank><button type="button">Visit website <i
+									class="fas fa-external-link-alt"></i></button></a>
+						<a href="https://discord.gg/T8cygSv" target=_blank><button type="button" class=discord><i
+									class="fab fa-discord"></i></button></a>
+						<a href="https://zc.stephcraft.net/twitter" target=_blank><button type="button" class=twitter><i
+									class="fab fa-twitter"></i></button></a>
+					</div>
+				</div> -->
+				<!-- Play again -->
+				<div class=section>
+					<a href="index.html"><button type="button">Начать заново</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="hud">
+		<span class="timer">00:00</span>
+		<div class="scoreboard"></div>
+	</div>
+
+	<dialog class="dialog">
+		<h1>Поздравляем! 🎉</h1>
+		<p>Вы прошли игру за <span>00:00</span></p>
+		<input type="text" name="name" placeholder="Ваше имя">
+		<button class="play-again">Сохранить и начать новую игру</button>
+	</dialog>
+	<!-- scripts -->
+	<script src="p5.js"></script>
+	<script src=plugins/clipboard.js></script>
+	<script src=plugins/transform.js></script>
+	<script src=plugins/cors.js></script>
+	<script src=jigsaw.js></script>
+	<script src=script.js></script>
+</body>
+
+</html>

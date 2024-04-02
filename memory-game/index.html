@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<title>Memory Game</title>
+
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<section class="memory-game">
+		<div class="memory-card" data-name="virus">
+			<img class="front-face" src="img/virus.svg" alt="Virus">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="virus">
+			<img class="front-face" src="img/virus.svg" alt="Virus">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="designer">
+			<img class="front-face" src="img/designer.svg" alt="Designer">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="designer">
+			<img class="front-face" src="img/designer.svg" alt="Designer">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="drone">
+			<img class="front-face" src="img/drone.svg" alt="Drone">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="drone">
+			<img class="front-face" src="img/drone.svg" alt="Drone">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="programmer">
+			<img class="front-face" src="img/programmer.svg" alt="Programmer">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="programmer">
+			<img class="front-face" src="img/programmer.svg" alt="Programmer">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="rj45">
+			<img class="front-face" src="img/rj45.svg" alt="Rj45">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="rj45">
+			<img class="front-face" src="img/rj45.svg" alt="Rj45">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="tireservice">
+			<img class="front-face" src="img/tireservice.svg" alt="Tireservice">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+
+		<div class="memory-card" data-name="tireservice">
+			<img class="front-face" src="img/tireservice.svg" alt="Tireservice">
+			<img class="back-face" src="img/logo.svg" alt="Memory Card">
+		</div>
+	</section>
+
+	<div class="hud">
+		<span class="timer">00:00</span>
+		<div class="scoreboard"></div>
+	</div>
+
+	<div class="start-page">
+		<div>
+			<span class="title">ЗАПОМИНАЛКИ</span>
+			<button class="start-btn">СТАРТ</button>
+			<span class="description">
+				Вам будет предоставленно 12 карточек с изображениями профессий колледжа МГКЭИТ. Необходимо найти для
+				каждой карточки пару и как можно быстрее!
+			</span>
+		</div>
+	</div>
+
+	<dialog class="dialog">
+		<h1>Поздравляем! 🎉</h1>
+		<p>Вы прошли игру за <span>00:00</span></p>
+		<input type="text" name="name" placeholder="Ваше имя">
+		<button class="play-again">Сохранить и начать новую игру</button>
+	</dialog>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-confetti@3/tsparticles.preset.confetti.bundle.min.js"></script>
+	<script src="scripts.js"></script>
+</body>
+
+</html>

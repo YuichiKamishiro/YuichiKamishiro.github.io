@@ -1,0 +1,275 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../../assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	background: #060AB2;
+}
+
+.memory-game {
+	width: 640px;
+	height: 640px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	perspective: 1000px;
+}
+
+.memory-card {
+	width: calc(25% - 10px);
+	height: calc(33.333% - 10px);
+	margin: 5px;
+	position: relative;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	transition: all .5s;
+	transform-style: preserve-3d;
+	transform: scale(1);
+}
+
+.memory-card.flip {
+	transform: rotateY(180deg);
+}
+
+.memory-card:active {
+	transform: scale(0.97);
+	transition: transform .2s;
+}
+
+.match.flip {
+	transition: none;
+	transform: rotateY(180deg);
+}
+
+.match.flip:active {
+	transform: scale(0.97) rotateY(180deg);
+	transition: transform .2s;
+}
+
+.match.flip:not(:active) {
+	/* transform: rotateY(0); */
+	transition: 0.2s;
+}
+
+.front-face,
+.back-face {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	position: absolute;
+	backface-visibility: hidden;
+	border-radius: 5px;
+	background: #1C7CCC;
+}
+
+.front-face {
+	transform: rotateY(180deg);
+}
+
+svg {
+	filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+}
+
+.start-page {
+	color: #fff;
+	/* line-height: 156px; */
+	position: absolute;
+	display: flex;
+	height: 100%; 
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/* top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%); */
+	/* text-align: center; */
+	/* background: #1C7CCC; */
+	background: url(./img/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.start-page div {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+	max-width: 1000px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.title {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 128px;
+	margin-bottom: 40px;
+}
+
+
+.start-page div button {
+	cursor: pointer;
+	color: #0D40BF;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 78px;
+	width: 815px;
+	height: 150px;
+	border-radius: 100px;
+	border: none;
+	justify-self: center;
+	margin-bottom: 40px;
+}
+
+@media screen and (max-width: 750px) and (max-height: 500px) {
+	.memory-game {
+		width: 50%;
+		height: 90%;
+	}
+
+	.memory-card {
+		width: calc(25% - 8px);
+		height: calc(33.333% - 8px);
+		margin: 4px;
+	}
+
+	.front-face,
+	.back-face {
+		padding: 10px;
+	}
+}
+
+.dialog {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 12pt;
+
+	text-align: center;
+	font-size: 1.2rem;
+	color: white;
+
+	flex-direction: column;
+
+	gap: 12pt;
+
+	
+	background: #1C7CCC;
+	border: 0;
+	border-radius: 10px;
+
+	box-shadow: black 0 0 10px -2px;
+}
+
+.dialog[open] {
+	display: flex;
+}
+
+.dialog::backdrop {
+	background: #00000052;
+}
+
+.dialog input {
+	border: 0;
+	border-radius: 4px;
+	padding: 6pt 12pt;
+}
+
+.dialog input:focus {
+	outline: none;
+}
+
+.dialog button {
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+
+	border: 0;
+	border-radius: 4px;
+	padding: 6pt 12pt;
+
+	transition: all 0.3s;
+}
+
+.dialog button:hover {
+	transform: scale(1.01);
+}
+
+.dialog button:active {
+	transform: scale(0.99);
+}
+
+.hud {
+	position: fixed;
+	top: 0; 
+	left: 0;
+	padding: 10pt;
+
+	color: white;
+}
+
+.hud .timer {
+	font-size: 2rem;
+	font-weight: bolder;
+}
+
+.hud .scoreboard {
+	margin-top: 8pt;
+	width: min-content;
+
+	display: flex;
+	flex-direction: column;
+	gap: 6pt;
+
+	font-size: 1.1rem;
+}
+
+.hud .scoreboard .score {
+	display: flex;
+	gap: 5pt;
+
+	flex-direction: row;
+}
+
+.hud .scoreboard .score .time {
+	font-weight: 600;
+	margin-left: auto;
+}
+
+.hud .scoreboard .score .name {
+	max-width: 250px;
+
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+

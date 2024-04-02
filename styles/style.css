@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+    /* margin: 0; */
+    padding: 0;
+    color: white;
+    font-family: Montserrat;
+}
+
+body {
+    /* background: linear-gradient(239.55deg, #0DCAF0 7.55%, #fff 82.53%); */
+    background: url(../assets/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background-image: url(../assets/background.png); */
+    margin: 0;
+    /* background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    background-size: 100% 100%; */
+}
+
+.title {
+    margin-top: 211px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 128px;
+}
+
+.subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.main {
+    text-align: center;
+    display: grid;
+}
+
+.games {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-gap: 20px;
+    padding: 20px; */
+}
+
+.game {
+    display: grid;
+    /* flex-wrap: wrap; */
+    /* width: 300px;
+    height: 300px; */
+    /* height: min-content; */
+    /* background: #378CE7; */
+    /* background-image: url(../assets/placeholder.png); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    border-radius: 50px;
+    /* border: solid 5px #67C6E3; */
+    text-align: center;
+}
+
+.game img {
+    /* display: none; */
+    /* position: relative; */
+    /* top: -20px; */
+    width: 321px;
+    height: 321px;
+    /* width: 100%;
+    height: 100%; */
+    /* transform: translateY(-30px); */
+    border-radius: 50px;
+    /* border: solid 5px #67C6E3; */
+
+}
+
+.game span {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    /* position: relative; */
+    /* top: -30px; */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    /* transform: translateY(-30px); */
+}
+
+footer {
+    opacity: 0.6;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+}
