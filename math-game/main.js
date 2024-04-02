@@ -3,7 +3,7 @@ var score;
 var action;
 var timeremaining;
 var correctAnswer;
-var level = 0;
+var level = 1;
 let correctPosition = 0;
 
 document.getElementById("startreset").onclick = function () {
