@@ -16,7 +16,7 @@ document.getElementById("startreset").onclick = function () {
 	if (playing == true) {
 		location.reload();
 	}
-	else if (playing == false && level != 0) {
+	else if (playing == false) {
 		playing = true;
 		score = 0;
 
@@ -142,7 +142,7 @@ function generateQA() {
 	if (level == 2) {
 		if (choice == 1) {
 			document.getElementById("question").innerHTML = "(" + x + "*" + y + ")" + "+" + z;
-		} else if (choice == 2) {
+		} else {
 			document.getElementById("question").innerHTML = "(" + x + "*" + y + ")" + "-" + z;
 		}
 	} else {

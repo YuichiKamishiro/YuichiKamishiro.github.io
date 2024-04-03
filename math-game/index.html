@@ -2,6 +2,14 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+	<button id="return" onclick="goBack()">
+		<span>Назад</span>
+	</button>
 	<div id="container">
 		<div id="score">
 			Счет: <span id="scorevalue" style="font-weight: 900">0</span>

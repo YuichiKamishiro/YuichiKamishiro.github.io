@@ -39,6 +39,25 @@ html{
 	font-size: 25px;
 }
 
+#return span {
+	/* height: 100%; */
+	font-weight: 700;
+	text-align: center;
+}
+
+#return {
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40;
+	width: 100;
+	background-color: white;
+	border-radius: 25px;
+	text-align: center;
+	color: #0D40BF;
+	position: relative;
+}
 
 .right {
 	outline: solid 4px #42e252;
