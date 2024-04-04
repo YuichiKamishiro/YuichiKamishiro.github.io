@@ -7,6 +7,15 @@
 </head>
 
 <body>
+    <script>
+		function gogo() {
+			window.history.back();
+		}
+	</script>
+	<button id="return" onclick="gogo()">
+		<span>Назад</span>
+	</button>
+
     <div class="start-page">
         <div class="professions">
             <span>Выбери свою профессию</span>
@@ -19,7 +28,17 @@
     <div class="main">
         <canvas id="gameCanvas" width="1920" height="1080"></canvas>
     </div>
-    <script src="index.js"></script>
+
+	<div class="score">
+        <span>0%</span>
+	</div>
+
+	<dialog class="dialog">
+        <span>🎉Молодец! Теперь ты - <span class="profession"></span>!</span>
+        <button class="play-again">Начать заново</button>
+	</dialog>
+
+    <script src="index.js" type="text/javascript"></script>
 </body>
 
 </html>
