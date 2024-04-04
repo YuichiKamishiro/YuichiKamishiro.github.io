@@ -91,3 +91,27 @@
     font-size: 48px;
     line-height: 59px;
 }
+#return span {
+	/* height: 100%; */
+	font-weight: 700;
+	text-align: center;
+    color: #0D40BF;
+}
+
+#return {
+	top: 95%;
+	right: 0%;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 100px;
+	background: white;
+	box-sizing: none;
+
+	border-radius: 25px;
+	text-align: center;
+	color: #0D40BF;
+	position: fixed;
+}

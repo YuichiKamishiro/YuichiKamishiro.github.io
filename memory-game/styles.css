@@ -280,6 +280,8 @@ svg {
 }
 
 #return {
+	top: 95%;
+	right: 0%;
 	border: none;
 	display: flex;
 	justify-content: center;
@@ -287,8 +289,11 @@ svg {
 	height: 40px;
 	width: 100px;
 	background-color: white;
+	background: white;
+	box-sizing: none;
+
 	border-radius: 25px;
 	text-align: center;
 	color: #0D40BF;
-	position: relative;
+	position: fixed;
 }

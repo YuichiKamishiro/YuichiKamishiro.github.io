@@ -11,14 +11,13 @@
 
 <body>
 	<script>
-		function goBack() {
+		function gogo() {
 			window.history.back();
 		}
 	</script>
-	<button id="return" onclick="goBack()">
+	<button id="return" onclick="gogo()">
 		<span>Назад</span>
 	</button>
-	
 	<section class="memory-game">
 		<div class="memory-card" data-name="virus">
 			<img class="front-face" src="img/virus.svg" alt="Virus">
@@ -29,7 +28,6 @@
 			<img class="front-face" src="img/virus.svg" alt="Virus">
 			<img class="back-face" src="img/logo.svg" alt="Memory Card">
 		</div>
-
 		<div class="memory-card" data-name="designer">
 			<img class="front-face" src="img/designer.svg" alt="Designer">
 			<img class="back-face" src="img/logo.svg" alt="Memory Card">
@@ -87,6 +85,14 @@
 	</div>
 
 	<div class="start-page">
+		<script>
+			function gogo() {
+				window.history.back();
+			}
+		</script>
+		<button id="return" onclick="gogo()">
+			<span>Назад</span>
+		</button>
 		<div>
 			<span class="title">ЗАПОМИНАЛКИ</span>
 			<button class="start-btn">СТАРТ</button>

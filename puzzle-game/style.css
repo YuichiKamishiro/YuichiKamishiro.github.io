@@ -409,3 +409,27 @@ a:hover {
     font-family: Minecraftia;
     src: url(fonts/Minecraftia.ttf);
 }
+#return span {
+	/* height: 100%; */
+	font-weight: 700;
+	text-align: center;
+    color: white;
+}
+
+#return {
+	top: 95%;
+	right: 0%;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 100px;
+	background: #0D40BF;
+	box-sizing: none;
+
+	border-radius: 25px;
+	text-align: center;
+	color: #0D40BF;
+	position: fixed;
+}
