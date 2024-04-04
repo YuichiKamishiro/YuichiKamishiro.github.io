@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+	<button id="return" onclick="goBack()">
+		<span>Назад</span>
+	</button>
+    <div id="container">
+        <div id="chooseDifficulty" style="display: block">
+
+            <h1>Угадайте слово</h1>
+            <h3>Выберите сложность</h3>
+            <button id="difficultyButtons" title="very easy" onclick="chooseDif1()">Легко</button>
+            <button id="difficultyButtons" title="not difficult" onclick="chooseDif2()">Нормально</button>
+            <button id="difficultyButtons" title="a challenge" onclick="chooseDif3()">Сложно</button>
+        </div>
+        <div id="startButton" style="display: none">
+
+            <div>Угадайте слово</div>
+            <button id="start" onclick="start()">Старт</button>
+
+        </div>
+
+        <div id="mainGame" style="display: none">
+
+            <p id="question"></p>
+
+            <input type="text" id="guess" maxlength="1">
+
+            <div>
+                <button id="guessButton" onclick="enterGuess()">Угадать</button>
+            </div>
+
+        </div>
+
+        <div id="RRguess" style="display: block">
+
+            <p id="rightGuess"></p>
+            <p id="wrongGuess"></p>
+            <p id="guessesLeft"></p>
+
+        </div>
+
+        <div id="youLose" style="display: none">
+
+            <h1>Вы проиграли</h1>
+
+            <div>
+                <button id="again" onclick="restart()">Заново?</button>
+            </div>
+
+            <p id="correctWordWas"></p>
+
+        </div>
+
+        <div id="youWin" style="display: none">
+
+            <h2>Вы выйграли</h2>
+
+            <div>
+                <button id="again" onclick="restart()">Заново?</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

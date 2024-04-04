@@ -1,0 +1,114 @@
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #0DCAF0, #0D40BF);
+}
+#again {
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 5px;
+    font-size: 50px;
+    background: linear-gradient(90deg, #0DCAF0, #0D40BF);
+    color: #fff;
+}
+#question {
+    font-size: 64px;
+    font-weight: 700;;
+}
+#guess {
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 25px;
+    font-size: 50px;
+    background: #0D40BF;
+    color: #fff;
+}
+#guessButton {
+    width: 300px;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 25px;
+    font-size: 50px;
+    background: #0D40BF;
+    color: #fff;
+}
+#startButton {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 128px;;
+}
+#start {
+    margin-top: 50px;
+    border-radius: 50px;
+    width: 815px;
+    height: 150px;
+    border: none;
+    font-size: 100px;
+    background: #fff;
+    color: #0D40BF;
+}
+p {
+    font-size: 40px;
+}
+#container {
+    height: 85%;
+    width: 80%;    
+    background: none;
+    color: white;
+    background-size: 100%;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    text-align: center;
+    font-size: 50px;
+    border-radius: 25px;
+
+  }
+#chooseDifficulty {
+    font-size: 50px;
+}
+#mainGameDiv {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+#difficultyButtons {
+    background: #fff;
+    border-radius: 25px;
+    border: none;
+    color: #0D40BF;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+h1 {
+
+}
+
+h2 {
+
+}
+#return span {
+	/* height: 100%; */
+	font-weight: 700;
+	text-align: center;
+}
+
+#return {
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40;
+	width: 100;
+	background-color: white;
+	border-radius: 25px;
+	text-align: center;
+	color: #0D40BF;
+	position: relative;
+}
