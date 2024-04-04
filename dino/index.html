@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dino Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="start-page">
+        <div class="professions">
+            <span>Выбери свою профессию</span>
+            <button onclick="selectProfession(0)">Программист</button>
+            <button onclick="selectProfession(1)">Дизайнер</button>
+            <button onclick="selectProfession(2)">Электромеханик</button>
+            <button onclick="selectProfession(3)">Электромонтажник</button>
+        </div>
+    </div>
+    <div class="main">
+        <canvas id="gameCanvas" width="1920" height="1080"></canvas>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
