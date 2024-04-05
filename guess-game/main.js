@@ -7,44 +7,28 @@ var winCount = 1;
 var guess = "";
 var dif = 0;
 
-function chooseDif1() {
-    dif = 1;
-    document.getElementById('startButton').style.display='block';
-    document.getElementById('chooseDifficulty').style.display='none';
-    let body = document.body;
-    body.style.background = "#0D40BF"
-}
-
-function chooseDif2() {
-    dif = 2;
-    document.getElementById('startButton').style.display='block';
-    document.getElementById('chooseDifficulty').style.display='none';
-    let body = document.body;
-    body.style.background = "#0D40BF"
-}
-
-function chooseDif3() {
-    dif = 3;
-    document.getElementById('startButton').style.display='block';
-    document.getElementById('chooseDifficulty').style.display='none';
+function chooseDif(difficulty) {
+    dif = difficulty;
+    document.getElementById('startButton').style.display = 'block';
+    document.querySelector('.chooseDifficulty').style.display = 'none';
     let body = document.body;
     body.style.background = "#0D40BF"
 }
 
 
 function wordw() {
-    var randomWords = ["программист", "разработчик", "дизайнер", "администратор", "гость", "пользователь"];
-    var raNum = Math.floor(Math.random() * 6);
+    const randomWords = ["программист", "разработчик", "дизайнер", "администратор", "гость", "пользователь"];
+    const raNum = Math.floor(Math.random() * 6);
     return randomWords[raNum]
-    }
+}
 
 
 function wordStart() {
-    var wordLength = word.length;
-    var wordL_ = "";
-    var count = wordLength;
+    // var wordLength = word.length;
+    // var wordL_ = "";
+    var count = word.length;
 
-    while(count > 0) {
+    while (count > 0) {
         wordGuess.push("___");
         count -= 1;
     }
@@ -55,12 +39,12 @@ function winCountFunc() {
     var lettUsed = "";
     var count = word.length;
 
-    while(count > 0) {
-        if(lettUsed.includes(word[count - 1])) {
+    while (count > 0) {
+        if (lettUsed.includes(word[count - 1])) {
 
         }
 
-        else{
+        else {
             num += 1;
             lettUsed += word[count - 1];
         }
@@ -72,53 +56,55 @@ function winCountFunc() {
 }
 
 function start() {
+    document.querySelector("#guess").addEventListener('change', _ => enterGuess());
+
     let body = document.body;
     body.style.background = "linear-gradient(90deg, #0DCAF0, #0D40BF)";
-    let container = document.getElementById("container");
-    container.style = "background: white; color: #0D40BF; font-weight: 700;";
+    // let container = document.getElementById("container");
+    // container.style = "background: white; color: #0D40BF; font-weight: 700;";
     word = wordw();
     winCount = winCountFunc();
 
-    if(dif == 1) {
+    if (dif == 1) {
         guessBomb = word.length + 5;
     }
 
-    else if(dif == 2) {
+    else if (dif == 2) {
         guessBomb = word.length;
     }
 
-    else if(dif == 3) {
-        if(word.length % 2 == 0) {
-           guessBomb = word.length / 2;
+    else if (dif == 3) {
+        if (word.length % 2 == 0) {
+            guessBomb = word.length / 2;
         }
-      
+
         else {
-           guessBomb = (word.length - 1) / 2;
+            guessBomb = (word.length - 1) / 2;
         }
     }
 
     console.log(word);
-    document.getElementById('mainGame').style.display='block';
-    document.getElementById('startButton').style.display='none';
+    document.getElementById('mainGame').style.display = 'block';
+    document.getElementById('startButton').style.display = 'none';
 
     document.getElementById("question").innerHTML = "Введите букву";
 
     wordStart();
 
-    document.getElementById('RRguess').style.display='block';
+    document.getElementById('RRguess').style.display = 'block';
     document.getElementById("rightGuess").innerHTML = "Прогресс слова: " + wordGuess;
     document.getElementById("wrongGuess").innerHTML = "Неверные буквы: " + wrongGuess;
     document.getElementById("guessesLeft").innerHTML = "Попыток осталось: " + guessBomb;
 
-    var x = document.getElementById("guess").maxLength;
+    // var x = document.getElementById("guess").maxLength;
     //document.getElementById("demo").innerHTML = x;
 }
 
 function enterGuess() {
-    var lett = document.getElementById("guess").value;
+    const lett = document.getElementById("guess").value;
     document.getElementById("guess").value = "";
 
-    if (lett.length === 1){
+    if (lett.length === 1) {
         var rightOnot = isRightOnot(lett);
         if (rightOnot == true) {
 
@@ -126,8 +112,8 @@ function enterGuess() {
         }
 
         else {
-            if(!wrongGuess.includes(lett)) {
-                console.log("hi");
+            if (!wrongGuess.includes(lett)) {
+                // console.log("hi");
                 wrongGuess.push(lett);
             }
             guessBomb -= 1;
@@ -155,8 +141,7 @@ function enterGuess() {
 }
 
 function isRightOnot(a) {
-    var n = word.includes(a);
-    return n;
+    return word.includes(a);
 }
 
 function NewCW(letter) {
@@ -165,47 +150,46 @@ function NewCW(letter) {
 
     while (count <= word.length - 1) {
         if (letter === word[count]) {
-            if(wordGuess[count] === letter) {
-            }
-            else {
-            }
+            // if(wordGuess[count] === letter) {
+            // }
+            // else {
+            // }
 
             wordGuess[count] = letter;
             count += 1;
         }
-
         else {
             count += 1;
         }
-
     }
 
 }
 
 function gameLose() {
-    document.getElementById('mainGame').style.display='none';
-    document.getElementById('RRguess').style.display='none';
-    document.getElementById('youLose').style.display='block';
+    document.getElementById('mainGame').style.display = 'none';
+    document.getElementById('RRguess').style.display = 'none';
+    document.getElementById('youLose').style.display = 'block';
     document.getElementById("correctWordWas").innerHTML = "Правильное слово было: " + word;
 }
 
 function gameWin() {
-    document.getElementById('mainGame').style.display='none';
-    document.getElementById('RRguess').style.display='none';
-    document.getElementById('youWin').style.display='block';
+    document.getElementById('mainGame').style.display = 'none';
+    document.getElementById('RRguess').style.display = 'none';
+    document.getElementById('youWin').style.display = 'block';
 }
 
 function restart() {
-    document.getElementById('mainGame').style.display='none';
-    document.getElementById('RRguess').style.display='none';
-    document.getElementById('youLose').style.display='none';
-    document.getElementById('youWin').style.display='none';
-    document.getElementById('chooseDifficulty').style.display='block';
+    document.getElementById('mainGame').style.display = 'none';
+    document.getElementById('RRguess').style.display = 'none';
+    document.getElementById('youLose').style.display = 'none';
+    document.getElementById('youWin').style.display = 'none';
+    document.querySelector('.chooseDifficulty').style.display = 'grid';
 
     let body = document.body;
     body.style.background = "linear-gradient(90deg, #0DCAF0, #0D40BF)";
-    let container = document.getElementById("container");
-    container.style = "background: none; color: white; font-weight: none;";
+    // let container = document.getElementById("container");
+    // container.style = "background: none; color: white; font-weight: none;";
+    // container.style = "";
     word = "";
     wordGuess = [];
     wrongGuess = [];

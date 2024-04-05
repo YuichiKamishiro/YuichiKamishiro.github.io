@@ -1,25 +1,49 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
+    color: #fff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
 }
 
 body {
     height: 100%;
     width: 100%;
-    background: linear-gradient(90deg, #0DCAF0, #0D40BF);
+    background: linear-gradient(123.65deg, #0DCAF0 6.96%, #0D40BF 78.19%);
 }
+
 #again {
     border-radius: 15px;
     border: none;
     margin-bottom: 5px;
     font-size: 50px;
-    background: linear-gradient(90deg, #0DCAF0, #0D40BF);
-    color: #fff;
+    background: #0D40BF;
+    box-shadow: 0px 4px 4px #0D40BF;
+    border-radius: 80px;
+    width: 815px;
+    height: 150px;
+    padding: 10px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    cursor: pointer;
+    margin-bottom: 50px;
 }
+
 #question {
     font-size: 64px;
-    font-weight: 700;;
+    font-weight: 700;
+    color: #0D40BF;
 }
+
 #guess {
     border-radius: 15px;
     border: none;
@@ -28,83 +52,140 @@ body {
     background: #0D40BF;
     color: #fff;
 }
+
 #guessButton {
-    width: 300px;
     border-radius: 15px;
     border: none;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-size: 50px;
     background: #0D40BF;
     color: #fff;
+    width: 437px;
+    height: 103px;
+    box-shadow: 0px 4px 4px #0D40BF;
+    border-radius: 26px;
 }
+
 #startButton {
     text-align: center;
     font-size: 128px;
 }
+
+#startButton div {
+    font-size: 128px;
+}
+
 #start {
+    cursor: pointer;
     margin-top: 50px;
-    border-radius: 50px;
-    width: 815px;
+    border-radius: 80px;
+    width: 100%;
+    max-width: 815px;
     height: 150px;
     border: none;
     font-size: 100px;
     background: #fff;
-    color: #0D40BF;
+    box-shadow: 0px 4px 4px #0D40BF;
 }
+
 p {
     font-size: 40px;
 }
-#container {
-    height: fit-content;
-    width: 80%;    
-    background: none;
-    color: white;
-    background-size: 100%;
-    position: relative;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%)translateY(-50%);
-    text-align: center;
-    font-size: 50px;
-    border-radius: 25px;
 
-  }
-#chooseDifficulty {
-    font-size: 50px;
-}
-#mainGameDiv {
-    height: 100%;
-    width: 100%;
-    background-color: white;
-}
-#difficultyButtons {
+#youLose, #youWin {
     background: #fff;
-    border-radius: 25px;
+    border-radius: 41px;
+    padding: 50px 100px 50px 100px;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+#rightGuess, #start, #guessesLeft, #wrongGuess, #correctWordWas, #youLose h1, #youWin h1 {
+    color: #0D40BF;
+}
+
+#youLose h1, #youWin h1 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    margin-bottom: 35px;
+}
+
+#wrongGuess {
+    margin-top: 30px;
+}
+
+.chooseDifficulty {
+    display: grid;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+}
+
+#mainGame {
+    border-radius: 41px;
+    background-color: white;
+    padding: 70px;
+}
+
+.title {
+    font-size: 128px;
+}
+
+.subtitle {
+    font-size: 64px;
+    margin-bottom: 60px;
+}
+
+.difficultyButtons {
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+.difficultyButtons button {
+    cursor: pointer;
+    background: #fff;
+    border-radius: 26px;
     border: none;
     color: #0D40BF;
-    padding: 15px 32px;
+    padding: 10px 50px 10px 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 35px;
     font-weight: 700;
-  }
+    box-shadow: 0px 4px 4px #0D40BF;
+}
 
 #return span {
-	font-weight: 700;
-	text-align: center;
+    font-size: 36px;
+    line-height: 44px;
+    color: #0D40BF;
 }
 
 #return {
-	border: none;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 40;
-	width: 100;
-	background-color: white;
-	border-radius: 25px;
-	text-align: center;
-	color: #0D40BF;
-	position: relative;
+    margin: 15px 0 0 15px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 184px;
+    height: 80px;
+    border-radius: 80px;
+    position: absolute;
 }

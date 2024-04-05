@@ -15,59 +15,45 @@
 		<span>Назад</span>
 	</button>
     <div id="container">
-        <div id="chooseDifficulty" style="display: block">
-
-            <h1>Угадайте слово</h1>
-            <h3>Выберите сложность</h3>
-            <button id="difficultyButtons" title="very easy" onclick="chooseDif1()">Легко</button>
-            <button id="difficultyButtons" title="not difficult" onclick="chooseDif2()">Нормально</button>
-            <button id="difficultyButtons" title="a challenge" onclick="chooseDif3()">Сложно</button>
+        <div class="chooseDifficulty">
+            <span class="title">УГАДАЙ СЛОВО</span>
+            <span class="subtitle">ВЫБЕРИТЕ СЛОЖНОСТЬ</span>
+            <div class="difficultyButtons">
+                <button onclick="chooseDif(1)">Легко</button>
+                <button onclick="chooseDif(2)">Нормально</button>
+                <button onclick="chooseDif(3)">Сложно</button>
+            </div>
         </div>
         <div id="startButton" style="display: none">
-
-            <div>Угадайте слово</div>
-            <button id="start" onclick="start()">Старт</button>
-
+            <div>УГАДАЙ СЛОВО</div>
+            <button id="start" onclick="start()">СТАРТ</button>
         </div>
 
         <div id="mainGame" style="display: none">
-
             <p id="question"></p>
-
             <input type="text" id="guess" maxlength="1">
-
             <div>
                 <button id="guessButton" onclick="enterGuess()">Проверить</button>
             </div>
-
-        </div>
-
-        <div id="RRguess" style="display: block">
-
-            <p id="rightGuess"></p>
-            <p id="wrongGuess"></p>
-            <p id="guessesLeft"></p>
-
+            <div id="RRguess" style="display: block">
+                <p id="rightGuess"></p>
+                <p id="wrongGuess"></p>
+                <p id="guessesLeft"></p>
+            </div>
         </div>
 
         <div id="youLose" style="display: none">
-
-            <h1>Вы проиграли :(</h1>
-
+            <h1>ВЫ ПРОИГРАЛИ</h1>
             <div>
-                <button id="again" onclick="restart()">Начать сначала</button>
+                <button id="again" onclick="restart()">попробовать снова</button>
             </div>
-
             <p id="correctWordWas"></p>
-
         </div>
 
         <div id="youWin" style="display: none">
-
-            <h2>🎉Вы выиграли!</h2>
-
+            <h1>🎉 ВЫ ВЫЙГРАЛИ!</h1>
             <div>
-                <button id="again" onclick="restart()">Начать сначала</button>
+                <button id="again" onclick="restart()">попробовать снова</button>
             </div>
         </div>
     </div>
